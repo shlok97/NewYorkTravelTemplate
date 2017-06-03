@@ -1,0 +1,51 @@
+html {
+  overflow-x: hidden;
+}
+body {
+  overflow-x: hidden;
+  overflow-y: scroll;
+  background-color: white;
+}
+
+.topNavbar {
+  font-size: 30px;
+  font-family: 'Josefin Sans', sans-serif;
+  font-weight: 100;
+  background: rgba(0, 0, 0, 0.6);
+  position: relative;
+  z-index: 4;
+}
+
+.logo {
+  font-size: 30px;
+  font-weight: 700;
+}
+
+.coverImage {
+  position: relative;
+  top: -70px;
+  left: 0;
+  width: 100%;
+}
+
+.binoculars {
+  width: 30%;
+  position: absolute;
+  z-index: 4;
+  left: 55%;
+}
+
+.empirestatebuilding {
+  width: 17%;
+  position: absolute;
+  z-index: 3;
+  left: 30%;
+
+}
+
+.skyline {
+  width: 100%;
+  position: absolute;
+  top: 20%;
+  z-index: 2;
+}
