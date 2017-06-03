@@ -48,6 +48,10 @@ body {
   z-index: 2;
 }
 
+.Container {
+  margin: 0;
+}
+
 .lightContainer {
   width: 100%;
   position: relative;
@@ -56,6 +60,7 @@ body {
   background-color: #EDEDED;
   height: 540px;
   color: #202020;
+  margin: 0;
 }
 
 .darkContainer {
@@ -102,4 +107,28 @@ body {
 .divImage {
   height: 540px;
   position: relative;
+}
+
+.footer-2 {
+  margin: 0;
+  padding: 0;
+  background-color: #1A1A1A;
+  color: white;
+  position: relative;
+  top: -170px;
+  height: 500px;
+  padding-top: 100px;
+  padding-bottom: 100px;
+  margin-bottom: 0;
+}
+
+.footer {
+  background-color: #DF7061;
+  position: relative;
+  top: -100px;
+  height: 200px;
+  margin-bottom: -100px;
+  margin-top: -70px;
+  padding-top: 25px;
+  color: #D5D5D5;
 }
