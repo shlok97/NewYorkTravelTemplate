@@ -40,12 +40,10 @@ body {
   position: absolute;
   z-index: 3;
   left: 30%;
-
 }
 
 .skyline {
   width: 100%;
   position: absolute;
-  top: 20%;
   z-index: 2;
 }

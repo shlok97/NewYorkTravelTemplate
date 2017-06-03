@@ -45,23 +45,38 @@
 
     <script type="text/javascript">
 
-      $(document).ready(setLayers);
-
       function setLayers() {
         $(".skyline, .empirestatebuilding , .binoculars").each(function(){
-          var height = $(this).height();
-          var parentHeight = $(this).parent().height();
-          var offset  = parentHeight - height;
-          if(offset > 0) {
-            $(this).css({top: offset});
-          }
-          else {
-            console.log("offset: ", offset);
-          }
+          var offset = returnPosition($(this));
+          $(this).css({top: offset});
+
         });
+        console.log(elements);
       }
 
+      function returnPosition(element) {
+        var height = element.height();
+        var parentHeight = element.parent().height();
+        var offset  = parentHeight - height - 60;
+        return offset;
+      }
+
+      function moveElementByOffset(element, factor) {
+        var scrollTop = $(window).scrollTop();
+        var top = returnPosition(element);
+
+        var finalPosition = top + scrollTop*factor;
+        element.css({top: finalPosition});
+      }
+
+      $(document).ready(setLayers);
       $(window).resize(setLayers);
+
+      $(window).scroll(function(event) {
+        moveElementByOffset($(".skyline"), 0.5);
+        moveElementByOffset($(".sky"), 1);
+        moveElementByOffset($(".empirestatebuilding"), 0.3);
+      });
 
     </script>
   </body>
