@@ -41,17 +41,37 @@
       <img src="img/nyc/sky_.jpg" class = "coverImage sky" alt="">
     </div>
 
+    <div class="darkContainer">
+      <div class="row">
+        <div class="col-md-3">
+          <img src="img/thumbnails/1.jpg" class = "thumbnails" alt="">
+        </div>
+
+        <div class="col-md-3">
+          <img src="img/thumbnails/2.jpg" class = "thumbnails" alt="">
+        </div>
+
+        <div class="col-md-6 thumbnails" style="padding: 100px">
+          <p  class = "mainHeading">
+            Explore the unseen
+          </p>
+          <p class = "contentText">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam
+          </p>
+        </div>
+
+      </div>
+    </div>
+
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
 
     <script type="text/javascript">
-
+      // funtions to create a parallax effect of the city
       function setLayers() {
         $(".skyline, .empirestatebuilding , .binoculars").each(function(){
           var offset = returnPosition($(this));
           $(this).css({top: offset});
-
         });
-        console.log(elements);
       }
 
       function returnPosition(element) {
@@ -73,9 +93,10 @@
       $(window).resize(setLayers);
 
       $(window).scroll(function(event) {
-        moveElementByOffset($(".skyline"), 0.5);
-        moveElementByOffset($(".sky"), 1);
+        moveElementByOffset($(".skyline"), 0.45);
+        moveElementByOffset($(".sky"), 0.65);
         moveElementByOffset($(".empirestatebuilding"), 0.3);
+        moveElementByOffset($(".binoculars"), 0.1);
       });
 
     </script>

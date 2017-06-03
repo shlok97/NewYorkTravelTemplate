@@ -47,3 +47,40 @@ body {
   position: absolute;
   z-index: 2;
 }
+
+.darkContainer {
+  width: 100%;
+  position: relative;
+  top: -150px;
+  z-index: 5;
+  background-color: #EDEDED;
+  height: 540px;
+  color: black;
+}
+
+.fullWidthContainer {
+  width: 100%;
+  position: absolute;
+  left: -10px;
+}
+
+.sky {
+  overflow: hidden;
+}
+
+.thumbnails {
+  padding: 40px;
+  height: 540px;
+}
+
+.mainHeading {
+  font-size: 70px;
+  font-family: 'Josefin Sans', sans-serif;
+  font-weight: 400;
+}
+
+.contentText {
+  font-size: 30px;
+  font-family: 'Josefin Sans', sans-serif;
+  font-weight: 100;
+}
