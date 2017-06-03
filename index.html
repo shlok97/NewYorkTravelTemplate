@@ -41,7 +41,10 @@
       <img src="img/nyc/sky_.jpg" class = "coverImage sky" alt="">
     </div>
 
-    <div class="darkContainer">
+
+    <!-- Explore the unseen -->
+
+    <div class="lightContainer">
       <div class="row">
         <div class="col-md-3">
           <img src="img/thumbnails/1.jpg" class = "thumbnails" alt="">
@@ -51,7 +54,7 @@
           <img src="img/thumbnails/2.jpg" class = "thumbnails" alt="">
         </div>
 
-        <div class="col-md-6 thumbnails" style="padding: 100px">
+        <div class="col-md-6 thumbnails textInImage">
           <p  class = "mainHeading">
             Explore the unseen
           </p>
@@ -59,7 +62,19 @@
             Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam
           </p>
         </div>
+      </div>
+    </div>
 
+    <div class="darkContainer">
+      <div class="row">
+        <div class="col-md-5">
+          <p class = "contentText textInImage" style="padding: 150px; font-size: 35px;">
+            JUST BECAUSE MY PATH IS DIFFERENT DOESN'T MEAN I'M LOST.
+          </p>
+        </div>
+        <div class="col-md-7">
+          <img src="img/empirestatebuilding2.jpg" class = "divImage" alt="">
+        </div>
       </div>
     </div>
 
@@ -97,6 +112,13 @@
         moveElementByOffset($(".sky"), 0.65);
         moveElementByOffset($(".empirestatebuilding"), 0.3);
         moveElementByOffset($(".binoculars"), 0.1);
+
+
+        if($(".textInImage").offset().top + 120 < $(window).scrollTop() + $(window).outerHeight()) {
+          $('.textInImage').fadeIn('slow');
+        } else {
+          $('.textInImage').css("display", "none");
+        }
       });
 
     </script>

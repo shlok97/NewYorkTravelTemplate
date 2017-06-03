@@ -48,14 +48,24 @@ body {
   z-index: 2;
 }
 
-.darkContainer {
+.lightContainer {
   width: 100%;
   position: relative;
   top: -150px;
   z-index: 5;
   background-color: #EDEDED;
   height: 540px;
-  color: black;
+  color: #202020;
+}
+
+.darkContainer {
+  width: 100%;
+  position: relative;
+  top: -150px;
+  z-index: 5;
+  background-color: #202020;
+  height: 540px;
+  color: #EDEDED;
 }
 
 .fullWidthContainer {
@@ -74,7 +84,7 @@ body {
 }
 
 .mainHeading {
-  font-size: 70px;
+  font-size: 60px;
   font-family: 'Josefin Sans', sans-serif;
   font-weight: 400;
 }
@@ -83,4 +93,13 @@ body {
   font-size: 30px;
   font-family: 'Josefin Sans', sans-serif;
   font-weight: 100;
+}
+
+.textInImage {
+  padding: 100px;
+}
+
+.divImage {
+  height: 540px;
+  position: relative;
 }
