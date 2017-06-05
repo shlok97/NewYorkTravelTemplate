@@ -35,10 +35,10 @@
     <!-- cover image start -->
 
     <div class="coverImage">
-      <img src="img/nyc/binoculars.png" class = "binoculars" alt="">
-      <img src="img/nyc/empirestatebuilding.png" class = "empirestatebuilding" alt="">
       <img src="img/nyc/skyline.png" class = "skyline" alt="">
       <img src="img/nyc/sky_.jpg" class = "coverImage sky" alt="">
+      <img src="img/nyc/empirestatebuilding.png" class = "empirestatebuilding" alt="">
+      <img src="img/nyc/binoculars.png" class = "binoculars" alt="">
     </div>
 
 
@@ -114,17 +114,16 @@
 
     <script type="text/javascript">
       // funtions to create a parallax effect of the city
-      function setLayers() {
-        $(".skyline, .empirestatebuilding , .binoculars").each(function(){
-          var offset = returnPosition($(this));
-          $(this).css({top: offset});
-        });
-      }
+
+      $(".skyline, .empirestatebuilding , .binoculars").each(function(){
+        var offset = returnPosition($(this));
+        $(this).css({top: offset});
+      });
 
       function returnPosition(element) {
         var height = element.height();
         var parentHeight = element.parent().height();
-        var offset  = parentHeight - height - 0;
+        var offset  = parentHeight - height;
         return offset;
       }
 
@@ -136,15 +135,17 @@
         element.css({top: finalPosition});
       }
 
-      $(document).ready(setLayers);
-      $(window).resize(setLayers);
-
-      $(window).scroll(function(event) {
+      function setupParallax() {
         moveElementByOffset($(".skyline"), 0.45);
         moveElementByOffset($(".sky"), 0.65);
         moveElementByOffset($(".empirestatebuilding"), 0.3);
         moveElementByOffset($(".binoculars"), 0.1);
+      }
 
+      $(window).resize(setupParallax);
+
+      $(window).scroll(function(event) {
+        setupParallax()
         if($(".textInImage").offset().top + 120 < $(window).scrollTop() + $(window).outerHeight()) {
           $('.textInImage').fadeIn('slow');
         } else {
